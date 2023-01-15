@@ -37,7 +37,7 @@ const WeatherPage = () => {
 
   const [height, setHeight] = useState(352);
   const [screenY, setScreenY] = useState(0);
-  const bottomSheetRef = useRef(null);
+  const bottomSheetRef = useRef(null);//elemnt ko selecet krne ke liye
 
   useEffect(() => {
     bottomSheetRef.current.addEventListener('touchmove', (ev) => {
@@ -59,9 +59,10 @@ const WeatherPage = () => {
         setScreenY(ev.targetTouches[i].screenY);
       }
     }, false);
-
-
   }, [screenY,height])
+
+
+
   return (
     <div className={styles.conatiner}>
       <div className={styles.temperatureConatiner}>
