@@ -4,6 +4,7 @@ import search from "../../../assests/icon/searchicon.svg"
 import rainIcon from "../../../assests/icon/rainIcon.svg"
 import windIcon from "../../../assests/icon/windIcon.svg"
 import sunIcon from "../../../assests/icon/sunIcon.svg"
+import { Link } from 'react-router-dom'
 
 const MainPage = () => {
   
@@ -24,7 +25,7 @@ const MainPage = () => {
                     <div className={styles.weatherInformation}>
                       <div className={styles.allitudeInfo}>
                          <p>H:24<sup>o</sup> L:18<sup>o</sup></p>
-                         <p>Bengaluru , India</p>
+                         <p><Link to="/place">Bengaluru , India</Link></p>
                       </div>
                       <p className={styles.airInfo}>
                         Mid Rain
