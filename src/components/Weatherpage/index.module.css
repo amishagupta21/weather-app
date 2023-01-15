@@ -55,13 +55,50 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 352px;
+    height: 40%;
     width: 100%;
     background: linear-gradient(143.23deg, rgba(46, 51, 90, 0.2) 8.21%, rgba(28, 27, 51, 0.2) 80.43%);
     box-shadow: inset 0px 1px 0px #FFFFFF;
     backdrop-filter: blur(25px);
     border-radius: 44px 44px 0px 0px;
+    animation: smoothScaleReverse 0.5s linear;
+
 }
+
+@keyframes smoothScaleReverse {
+    from {
+        height: 85%;
+    }
+
+    to {
+        height: 40%;
+    }
+}
+
+.bottomSheetScale {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 85%;
+    width: 100%;
+    background: linear-gradient(143.23deg, rgba(46, 51, 90, 0.2) 8.21%, rgba(28, 27, 51, 0.2) 80.43%);
+    box-shadow: inset 0px 1px 0px #FFFFFF;
+    backdrop-filter: blur(25px);
+    border-radius: 44px 44px 0px 0px;
+    animation: smoothScale 0.5s linear;
+}
+
+@keyframes smoothScale {
+
+    from {
+        height: 40%;
+    }
+
+    to {
+        height: 85%;
+    }
+}
+
 
 .chip {
     height: 49px;
