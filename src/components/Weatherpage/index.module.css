@@ -26,21 +26,27 @@
 
 .temperatureConatiner span:nth-child(2) {
     font-weight: 300;
-    font-size: 96px;
+    font-size: 18px;
     line-height: 70px;
     text-align: center;
     letter-spacing: 0.374px;
     color: #FFFFFF;
 }
+.temperatureConatiner span:nth-child(5){
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
 
+}
 .temperatureConatiner span:nth-child(3) {
     padding-top: 10px;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.38px;
-    color: rgba(235, 235, 245, 0.6);
+    /* color: rgba(235, 235, 245, 0.6); */
+    color: white;
 }
 
 .temperatureConatiner span:nth-child(4) {

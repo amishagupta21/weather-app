@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from "./index.module.css"
 import raining from "../../assests/icon/raining.svg"
+import { useLocation } from 'react-router-dom'
 
 const WeatherPage = () => {
   const temperature = [
@@ -45,12 +46,8 @@ const WeatherPage = () => {
   useEffect(() => {
 
     const move = (ev) => {
-      // Iterate through the touch points that were activated
-      // for this element and process each event 'target'
       // console.log(ev.targetTouches[i].target);
       for (let i = 0; i < ev.targetTouches.length; i++) {
-
-
         // Checking if previous value of Y is smaller than current Y value
         // console.log("pehle->",screenY,"baadme->",ev.targetTouches[i].screenY);
         if (screenY > ev.targetTouches[i].screenY) {
@@ -72,14 +69,17 @@ const WeatherPage = () => {
     
   }, [screenY])
 
-
+ const {state}=useLocation()
+ console.log(state)
   return (
     <div className={styles.conatiner}>
+      
       <div className={styles.temperatureConatiner}>
-        <span>Bengaluru</span>
-        <span>19<sup>o</sup></span>
-        <span>Mostly Clear</span>
-        <span>H : 24<sup>o</sup>  L : 18<sup>o</sup></span>
+        <span>{state.climates.location.name}</span>
+        <span>{state.climates.location.localtime}<sup>o</sup></span>
+        <span>{state.climates.location.lat}</span>
+        <span>{state.climates.location.region}</span>
+        <span>localtime_epoch : {state.climates.location.localtime_epoch}</span>
       </div>
 
       <div className={direction?styles.bottomSheetScale:styles.bottomSheet}>
