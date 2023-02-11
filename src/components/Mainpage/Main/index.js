@@ -16,7 +16,7 @@ const MainPage = () => {
   const searchClimate = () => {
     axios({
       method:"GET",
-      url:`http://api.weatherapi.com/v1/forecast.json?key=731b37502d074c4392a232609231002&q=${weather}&days=1&aqi=no&alerts=no`
+      url:`https://api.weatherapi.com/v1/forecast.json?key=731b37502d074c4392a232609231002&q=${weather}&days=1&aqi=no&alerts=no`
     }).then((response)=>{
       navigate("/place",{
         state:{
@@ -30,7 +30,7 @@ const MainPage = () => {
   const find = () => {
     axios({
       method: "GET",
-      url: "http://api.weatherapi.com/v1/forecast.json?key=731b37502d074c4392a232609231002&q=India&days=1&aqi=no&alerts=no"
+      url: "https://api.weatherapi.com/v1/forecast.json?key=731b37502d074c4392a232609231002&q=India&days=1&aqi=no&alerts=no"
     }).then((response) => {
       setClimate(response.data)
     }).catch((error) => {
