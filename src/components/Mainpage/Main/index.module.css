@@ -113,3 +113,12 @@
     letter-spacing: -0.078px;
     color: #FFFFFF;
 }
+
+@media screen and (min-width:500px) {
+    .container {
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+
+}
